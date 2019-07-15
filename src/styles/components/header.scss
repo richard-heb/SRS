@@ -1,0 +1,14 @@
+.navbar {
+    background-color: $primary;
+    color:white;
+
+    &.shared{
+        left: 57px;
+        background-color: $alt-blue;
+    }
+}
+
+.btn {
+    background-color: $primary;
+    border: none;
+}

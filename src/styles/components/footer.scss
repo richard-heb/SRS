@@ -1,0 +1,13 @@
+.footer {
+    color: white;
+
+    &.short{
+        left: 57px;
+        background-color: $alt-blue;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+}

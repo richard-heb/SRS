@@ -1,0 +1,28 @@
+.menu-left{
+    background-color: $primary;
+    height: 100%;
+    width: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+
+    .link {
+        height: 57px;
+        width: 56px;
+        border-bottom: 1px solid $background;
+        margin-right: 0px;
+        
+        &.top {
+            background-color: $primary
+        }
+
+        &.btm {
+            background-color: $primary;
+            border-bottom: none;
+            border-top: 1px solid $background;
+            position: fixed;
+            bottom: 0px;
+        }
+    }
+}
