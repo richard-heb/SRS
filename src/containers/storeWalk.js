@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import Tabs from '../components/TabSection';
 
 class StoreWalk extends React.Component {
 
@@ -12,6 +13,7 @@ class StoreWalk extends React.Component {
         <div className='page-header'>
           Please select department to walk
         </div>
+        <Tabs/>
       </div>
     );
   }

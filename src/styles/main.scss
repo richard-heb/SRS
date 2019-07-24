@@ -3,10 +3,15 @@
 @import './containers/app';
 @import './containers/mainMenu';
 @import './containers/storeWalk';
+// @import './containers/actionsScreen.scss';
 
 @import './components/header';
 @import './components/sidebar';
 @import './components/footer';
 @import './components/menuButton';
+@import './components/tabSection';
+
+@import '_actionsScreen';
+@import '_globals';
 
 @import './index';

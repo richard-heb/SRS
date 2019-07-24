@@ -1,0 +1,24 @@
+.tab-section {
+  // margin-left: 57px;
+  // border: solid black 1px;
+}
+
+.tab-content{
+  border-top:2px solid $primary;
+}
+
+.nav-item{
+  width:100px;
+  text-align:center;
+  margin-left:5px;
+  background-color: $dark-grey;
+  color: $secondary;
+  border: none;
+  font-weight: 500;
+
+  &.active{
+    background-color: $primary !important;
+    color: $secondary !important;
+    border: none;
+  }
+}

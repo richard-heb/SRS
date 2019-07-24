@@ -4,6 +4,7 @@ import {ConnectedRouter} from 'connected-react-router';
 import App from './containers/app';
 import StoreWalk from './containers/storeWalk';
 import MainMenu from './containers/mainMenu';
+import ActionScreen from './containers/actionScreen';
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
   {
     path: '/store-walk',
     component: StoreWalk,
+    exact: true
+  },
+  {
+    path: '/action-screen',
+    component: ActionScreen,
     exact: true
   },
 ];
