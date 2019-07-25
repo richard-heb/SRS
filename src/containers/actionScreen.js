@@ -14,7 +14,7 @@ const ActionScreen = (props) => {
   return (
     <div>
     <div className='action-screen' >
-      <Header shared={true} />
+      <Header shared={true} title={'Store  System'} />
       <Sidebar action={action}/>
       <Container>
         <Row>

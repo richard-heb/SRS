@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const mainMenu = () => {
     return (
-        <div>
+        <div >
             <Header shared={false} title={'Store Replenishment System'} /> 
             <div className='main-menu'>
                 <MenuButton label='Unified Store Walk' route='/store-walk' />

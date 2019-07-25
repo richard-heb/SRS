@@ -1,14 +1,31 @@
 .footer {
-    color: white;
-    height: 56px;
+  font-weight: bold;
+  padding-left:0px;
+  padding-right:0px;
 
-    &.short{
-        left: 57px;
-        background-color: $alt-blue;
+  button{
+    background-color: $primary;
+    outline:none;
+    border:none;
+    padding: 0px;
+  }
+
+  svg {
+    height:2em;
+    width:3em;
+  }
+
+
+  @media (max-width:$break-xs){
+
+    button{
+      padding: 0px;
+      font-size:$header-font-min;
     }
 
-    .navbar-brand {
-        color: white;
+    svg {
+      height:1em;
+      width:2em;
     }
-
+  }
 }

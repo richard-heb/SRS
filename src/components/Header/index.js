@@ -14,17 +14,16 @@ const MenuTop = (props) => {
   const headerLabel = headerTitle(title);
   
   return (
-    <Navbar className={`${sharedClass}`} fixed='top'>
-      <Navbar.Brand href="#home"> 
-      <img src={Logo} alt="logo" />
-      </Navbar.Brand>
-      <Nav className="mr-auto">
-        {headerLabel}
+    <Navbar className={`${sharedClass}`} >
+      <Nav className="mr-auto nav-title" >
+        <Nav.Item>
+          <img src={Logo} alt="logo" />
+        </Nav.Item>
+          <div style={{display: 'inline-block', overflow:'hidden'}}>{title}</div>
       </Nav>
 
-      <Button style={{backgroundColor: '#022B96', outline:'none'}}>
-        {/* <FaSignOutAlt size={30}/> */}
-        <img src={ExportIcon} alt="export" style={{height:'25px', width: '25px', backgroundColor: '#022B96'}}/>     
+      <Button className='signout-btn'>
+        <FaSignOutAlt/>
       </Button>
     </Navbar>
   )

@@ -1,11 +1,12 @@
 .menu-left{
     background-color: $primary;
     height: 100%;
-    width: 56px;
+    width: $header;
     position: fixed;
     top: 0;
     left: 0;
     overflow-x: hidden;
+    border-right: 1px solid $background;
 
     &.replenishment{
         background-color: $green;
@@ -20,8 +21,8 @@
     }
 
     .link {
-        height: 57px;
-        width: 56px;
+        height: $header;
+        width: $header;
         border-bottom: 1px solid $background;
         margin-right: 0px;
         
@@ -36,5 +37,14 @@
             position: fixed;
             bottom: 0px;
         }
+
+        @media (max-width:$break-sm){
+            width: $header-min;
+            height: $header-min;
+        }
+    }
+
+    @media (max-width:$break-sm){
+        width: $header-min;
     }
 }
