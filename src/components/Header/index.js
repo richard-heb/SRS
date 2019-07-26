@@ -4,26 +4,29 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Logo from './HEB-logo.svg';
 import ExportIcon from './export.png';
-import { FaShareSquare, FaSignOutAlt } from 'react-icons/fa';
+import { FaBars, FaSignOutAlt } from 'react-icons/fa';
 import {headerTitle} from '../../utils/constants.js'
-import { NONAME } from 'dns';
+
 
 const MenuTop = (props) => {
-  const { shared, title} = props;
+  const { shared} = props;
   const sharedClass = shared ? 'shared' : ''
-  const headerLabel = headerTitle(title);
+  const title = 'Unified Store Walk';
   
   return (
     <Navbar className={`${sharedClass}`} >
       <Nav className="mr-auto nav-title" >
-        <Nav.Item>
+        <Nav.Item className='menu-toggle-item'>
+          <FaBars className='menu-toggle'/>
+        </Nav.Item>
+        <Nav.Item className='logo-item'>
           <img src={Logo} alt="logo" />
         </Nav.Item>
-          <div style={{display: 'inline-block', overflow:'hidden'}}>{title}</div>
+          <div className='title-text'>{title}</div>
       </Nav>
 
       <Button className='signout-btn'>
-        <FaSignOutAlt/>
+        <FaSignOutAlt className='logout-svg'/>
       </Button>
     </Navbar>
   )

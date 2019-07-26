@@ -1,21 +1,21 @@
 .main-menu {
-  margin-top: $header;
+  // margin-top: $header;
   margin-bottom: $header;
   margin-left: $one-unit;
   margin-right: $one-unit;
 
 
   .menu-btn{
-    height: $menu-button-height;
+    // height: $menu-button-height;
     background-color: $secondary;
     color: #434343;
     width:100%;
     border-radius: .02em;
-    margin: $one-unit;
+    // margin: $one-unit;
   }
 
   @media (max-width:$break-xs){
-    margin-top: $header-min;
+    // margin-top: $header-min;
     margin-bottom: $header-min;
 
     .menu-btn{

@@ -16,16 +16,19 @@
   }
 
 
-  @media (max-width:$break-xs){
 
+  @media (max-width:$break-xs){
     button{
-      padding: 0px;
       font-size:$header-font-min;
     }
 
     svg {
       height:1em;
       width:2em;
+    }
+
+  .settings-item{
+      width:40px
     }
   }
 }

@@ -1,0 +1,150 @@
+.navbar {
+    background-color: $primary;
+    color:white;
+    height: $header;
+    font-size: $header-font;
+    font-weight: 500;
+    padding-left:0px;
+    padding-right:0px;
+    z-index: $front;
+
+    svg {
+        height: $header-svg-size;
+        width: $header-svg-size;
+    }
+
+    img{
+        height: 1.3em;
+        margin-right: 0px !important;
+        margin-bottom: 0.125em;
+    }
+    
+    button {
+        background-color: $primary;
+        border: none;
+        outline:none;
+    }
+
+    .menu-toggle {
+        margin-bottom: .15em;
+    }
+
+    .menu-toggle-item {
+        width: $header;
+    }
+
+    .nav-title{
+        height: $header;
+        line-height: $header;
+    }
+
+    .nav-item {
+        margin:0px;
+        background-color: $primary;
+    }
+
+    .title-text {
+        display: inline-block;
+        overflow: hidden;
+    }
+
+
+    // @media (max-width:$break-md){
+    //     font-size: $header-font-mid;
+    // }
+
+    @media (max-width:$break-xs){
+        font-size: $header-font-min;
+
+        .logout-svg{
+            height: 1em;
+            width: 1em;
+        }
+
+        .logo-item{
+            width:40px
+        }
+
+        .signout-btn{
+            padding-bottom: 0px;
+            padding-top: 0px;
+            margin-bottom:0.250em;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // &.shared{
+    //     left: $header;
+    //     background-color: $alt-blue;
+    // }
+
+
+    // .signout-btn{
+    //     background-color: $primary;
+    //     border: none;
+    //     outline:none;
+
+    //     &.shared{
+    //         background-color: $alt-blue;
+    //     }
+    // }
+
+
+    // @media (max-width:$break-xs){
+    //         // height: $header-min;
+    //         font-size: $header-font-min;
+
+    //         &.shared{
+    //             left: $header-min;
+    //         }
+
+    //         .nav-title{
+    //             height: $header-min;
+    //             line-height: $header-min;
+        
+    //             img{
+    //                 height: 15px;
+    //                 margin-top: 2px;
+    //                 margin-right: 5px;
+    //             }
+    //         }
+            
+    //         .signout-btn{
+    //             padding-bottom: 0px;
+    //             padding-top: 0px;
+    //             margin-bottom:4px;
+    //             svg {
+    //                 height:1em;
+    //                 width:1em;
+    //             }
+    //         }
+
+    //         .nav-item {
+    //             width: 50px;
+    //         }
+
+    // }
+
+}

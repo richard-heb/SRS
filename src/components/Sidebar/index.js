@@ -5,11 +5,13 @@ const MenuLeft = (props) => {
 	const {action} = props;
     return (
 			<div className={`menu-left ${action}`}>
+					<div className="new-link"> 
+						<button>X</button>
+					</div>
+					<div className="new-link"> 
+						<button>X</button>
+					</div>
 
-					{/* <div className='link top' ></div>
-					<div className='link' ></div>
-					<div className='link' ></div>
-					<div className='link btm'></div> */}
 			</div>
     );
 }
