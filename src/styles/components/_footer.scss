@@ -11,24 +11,18 @@
   }
 
   svg {
-    height:2em;
-    width:3em;
+    height: $header-svg-size;
+    width: $header-svg-size;
   }
 
-
+  .settings-item{
+    width:$header;
+    text-align:center;
+  }
 
   @media (max-width:$break-xs){
     button{
       font-size:$header-font-min;
-    }
-
-    svg {
-      height:1em;
-      width:2em;
-    }
-
-  .settings-item{
-      width:40px
     }
   }
 }

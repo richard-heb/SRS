@@ -7,6 +7,7 @@ $dark-grey: #6B6B6B;
 $orange: #e47605;
 $green: #1d9703;
 $yellow: #FFFE94;
+$purple: #9400D3;
 
 $break-xs: 320px; //iphone 5
 $break-sm: 375px; //iphone x
@@ -32,3 +33,7 @@ $header-logo-size-min: 0.625em;
 
 $front: 500;
 $back:-1;
+
+$replenishment: $green;
+$adjustments: $orange;
+$psa: $purple;

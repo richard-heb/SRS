@@ -1,4 +1,6 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const Basic = () => (
@@ -25,11 +27,16 @@ const Basic = () => (
       }}
     >
       {({ isSubmitting }) => (
-        <Form className='form-inline' >
-          <button type="submit" disabled={isSubmitting} >
-            UPC
-          </button>
-          <Field type="upc" name="upc" className='form-control' style={{borderRadius:'1px', width: 'fill'}} />
+        <Form  >
+         
+              <button type="submit" disabled={isSubmitting} >
+                UPC
+              </button>
+
+            <Field type="upc" name="upc" className='form-control' style={{borderRadius:'1px', width: 'fill'}} />
+
+
+        
           <ErrorMessage name="upc" component="div" />
         </Form>
       )}

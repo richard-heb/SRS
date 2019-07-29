@@ -49,7 +49,7 @@ class StoreWalk extends React.Component {
                   return (
                     <Row>
                       <Col>
-                        <Button>{department.name}
+                        <Button >{department.name}
                           {/* <Badge variant="light" style={{height:'40px', width:'40px', borderRadius: '20px', textAlign: 'center', paddingTop: '15px', float: 'right', backgroundColor: 'red', color: 'white', marginBottom: '30px'}}>{department.count}</Badge> */}
                         </Button>
                       

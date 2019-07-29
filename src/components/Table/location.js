@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 
 const LocTable = (props) => {
   return (
-    <Table responsive>
+    <Table responsive >
       <tbody>
         <tr>
           <th>Dept</th>

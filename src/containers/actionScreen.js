@@ -13,13 +13,13 @@ const ActionScreen = (props) => {
   const action = 'replenishment';
   return (
     <div>
-    <div className='action-screen' >
-      <Header shared={true} title={'Store  System'} />
+      <Header />
       <Sidebar action={action}/>
+    <div className='action-screen' >
       <Container>
         <Row>
           <Col>
-            <div className='page-header'>Mr Bubble Bath Orig Bubbl</div>
+            <div className='page-header'>Mr Bubble Bath Orig Bubble</div>
           </Col>
         </Row>
         <Row>
@@ -35,7 +35,7 @@ const ActionScreen = (props) => {
 
         <Row>
           <Col>
-            <Button>Skip</Button>
+            <Button className='action-btn'>Skip</Button>
           </Col>
         </Row>
 
@@ -46,15 +46,15 @@ const ActionScreen = (props) => {
             <div className='label' >Skip</div>
           </Button> */}
           
-      <Footer shared={true} />
+      <Footer  />
     </div>
-    <div style={{ position:'absolute', bottom: '57px', width: '100%', paddingLeft:'56px'}}>
+    {/* <div style={{ position:'absolute', bottom: '57px', width: '100%', paddingLeft:'56px'}}>
       <div style={{border:'1px solid red', textAlign:'center'}}>
           <div style={{border:'1px solid green',marginLeft: '15px',marginRight: '15px'}}>
             <Button block style={{marginTop:'10px', marginBottom: '25px'}}>Skip</Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

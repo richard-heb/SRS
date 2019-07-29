@@ -1,4 +1,5 @@
 .store-walk {
+  margin-top: $header;
   margin-left: $header;
 
   .page-header {
@@ -21,21 +22,15 @@
 
   @media (max-width:$break-xs){
     margin-left: $header-min;
+    margin-top: $header-min;
 
     .page-header {
       font-size: $header-font-min;
-    }
-
-    .page-header {
-      line-height: $header-min;
-      height: $header-min;
     }
 
     button {
       font-size: $header-font-min;
       height: 3em;
     }
-
-
   }
 }

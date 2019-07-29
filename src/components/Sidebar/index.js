@@ -1,15 +1,16 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import {FaBarcode, FaReply} from 'react-icons/fa';
 
 const MenuLeft = (props) => {
-	const {action} = props;
+	const action = 'adjustments'
     return (
 			<div className={`menu-left ${action}`}>
 					<div className="new-link"> 
-						<button>X</button>
+						<button><FaReply/></button>
 					</div>
 					<div className="new-link"> 
-						<button>X</button>
+						<button><FaBarcode/></button>
 					</div>
 
 			</div>

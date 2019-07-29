@@ -19,7 +19,7 @@
         margin-bottom: 0.125em;
     }
     
-    button {
+    button, a  {
         background-color: $primary;
         border: none;
         outline:none;
@@ -31,6 +31,7 @@
 
     .menu-toggle-item {
         width: $header;
+        text-align:center;
     }
 
     .nav-title{
@@ -48,15 +49,15 @@
         overflow: hidden;
     }
 
-
-    // @media (max-width:$break-md){
-    //     font-size: $header-font-mid;
-    // }
-
     @media (max-width:$break-xs){
         font-size: $header-font-min;
 
-        .logout-svg{
+        a{
+            padding: 0px;
+            margin-bottom: .2em;
+        }
+
+        .logout-svg, .menu-toggle{
             height: 1em;
             width: 1em;
         }
