@@ -42,6 +42,10 @@
     .nav-item {
         margin:0px;
         background-color: $primary;
+
+        &.main{
+            margin-left:.5em;
+        }
     }
 
     .title-text {

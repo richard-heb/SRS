@@ -11,17 +11,18 @@ import {headerTitle} from '../../utils/constants.js'
 
 
 const MenuTop = (props) => {
-  const { shared} = props;
-  const sharedClass = shared ? 'shared' : ''
-  const title = 'Unified Store Walk';
+  const { mainMenu, title} = props;
+  const logoMargin = mainMenu ? 'main' : '';
+  const showMenuBars = !mainMenu ? (
+    <Nav.Item className='menu-toggle-item'>
+      <Button href="/"><FaBars className='menu-toggle'/></Button>
+    </Nav.Item>) : (<div/>);
   
   return (
-    <Navbar className={`${sharedClass}`} fixed="top" >
+    <Navbar  fixed="top" >
       <Nav className="mr-auto nav-title" >
-        <Nav.Item className='menu-toggle-item'>
-          <Button href="/"><FaBars className='menu-toggle'/></Button>
-        </Nav.Item>
-        <Nav.Item className='logo-item'>
+        {showMenuBars}
+        <Nav.Item className={`logo-item ${logoMargin}`}>
           <img src={Logo} alt="logo" />
         </Nav.Item>
           <div className='title-text'>{title}</div>

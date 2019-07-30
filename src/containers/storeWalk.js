@@ -32,7 +32,7 @@ class StoreWalk extends React.Component {
   render() {
     return (
       <div >
-        <Header />
+        <Header title='Unified Store Walk' />
         <Sidebar/>
 
         <div className="store-walk">

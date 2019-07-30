@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const mainMenu = () => {
     return (
         <div >
-            <Header shared={false} title={'Store Replenishment System'} /> 
+            <Header mainMenu={true} title='Store Replenishment Service'/> 
             <div className='main-menu'>
                 <MenuButton label='Unified Store Walk' route='/store-walk' />
                 <MenuButton label='Stock Status' />
@@ -20,7 +20,7 @@ const mainMenu = () => {
                 <MenuButton label='Pallet PSA' />
                 <MenuButton label='Seasonal Counts' />
             </div>
-            <Footer shared={false} />
+            <Footer mainMenu={true} />
         </div>
     )
 }

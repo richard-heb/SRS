@@ -8,6 +8,10 @@
     outline:none;
     border:none;
     padding: 0px;
+
+    &.with-margin{
+      margin-left: .5em;
+    }
   }
 
   svg {
@@ -18,6 +22,10 @@
   .settings-item{
     width:$header;
     text-align:center;
+
+    & .logo-margin{
+      margin-left: 1em;
+    }
   }
 
   @media (max-width:$break-xs){

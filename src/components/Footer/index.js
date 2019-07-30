@@ -5,17 +5,20 @@ import Button from 'react-bootstrap/Button';
 import {FaChevronRight, FaChevronLeft, FaCog} from 'react-icons/fa';
 
 const Footer = (props) => {
-    const {shared} = props;
-    const sharedClass = shared ? 'shared' : ''
+		const {mainMenu} = props;
+		const logoMargin = mainMenu ? 'with-margin' : ''
+    const showCog = !mainMenu ? (
+			<Nav.Item className={`settings-item ${logoMargin}`}>
+				<Button>
+					<FaCog/>
+				</Button>
+			</Nav.Item>
+		) : (<div/>)
     return ( 
-			<Navbar className={`footer ${sharedClass}`} fixed="bottom" >
+			<Navbar className='footer' fixed="bottom" >
 				<Nav className="mr-auto">
-					<Nav.Item className='settings-item'>
-						<Button>
-							<FaCog/>
-						</Button>
-					</Nav.Item>
-					<Button>
+					{showCog}
+					<Button className={`${logoMargin}`}>
 						<FaChevronLeft/>
 						Previous
 					</Button>
