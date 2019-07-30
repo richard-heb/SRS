@@ -1,6 +1,6 @@
 .action-screen{
   margin-top: $header;
-  margin-left: $header;
+  // margin-left: $header;
   margin-bottom: $header + 1em;
 
   .page-header {
@@ -32,7 +32,10 @@
   }
 
   .action-btn {
-    margin-top: 10em;
+    // margin-top: 10em;
+    margin-top: .3em;
+    margin-bottom: 3em;
+    font-size: 2em;
     width: inherit;
     background-color: $dark-grey;
     border: none;
@@ -73,7 +76,7 @@
 
 
   @media (max-width:$break-xs){
-    margin-left: $header-min;
+    // margin-left: $header-min;
     margin-bottom: $header-min + .5em;
     margin-top: $header-min;
 
@@ -92,6 +95,7 @@
 
     .action-btn {
       font-size: $header-font-min;
+      margin-bottom: 8em;
     }
   }  
 }

@@ -28,14 +28,14 @@ const MenuTop = (props) => {
           <div className='title-text'>{title}</div>
       </Nav>
 
-      <Button className='signout-btn'>
-        <FaSignOutAlt className='logout-svg'/>
+       {/* <Button className='signout-btn'>
+         <FaSignOutAlt className='logout-svg'/>
+       </Button> */}
 
-        {/* <DropdownButton alignRight className='logout-svg' id="dropdown-basic-button" title={<FaUserCog className='logout-svg'/>} drop='down' >
-          <Dropdown.Item href="#/action-1"><FaCog /> User Preferences</Dropdown.Item>
-          <Dropdown.Item href="#/action-2"><FaSignOutAlt /> Log Out</Dropdown.Item>
-        </DropdownButton> */}
-      </Button>
+      <DropdownButton alignRight id="dropdown-basic-button" title={<FaUserCog className='logout-svg'/>} drop='down' >
+        <Dropdown.Item href="#/action-1" ><FaCog /> User Preferences</Dropdown.Item>
+        <Dropdown.Item href="#/action-2"><FaSignOutAlt /> Log Out</Dropdown.Item>
+      </DropdownButton>
     </Navbar>
   )
 }

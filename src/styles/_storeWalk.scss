@@ -1,6 +1,6 @@
 .store-walk {
   margin-top: $header;
-  margin-left: $header;
+  // margin-left: $header;
 
   .page-header {
     line-height: $header;
@@ -21,7 +21,7 @@
 
 
   @media (max-width:$break-xs){
-    margin-left: $header-min;
+    // margin-left: $header-min;
     margin-top: $header-min;
 
     .page-header {

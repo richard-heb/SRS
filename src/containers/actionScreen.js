@@ -10,11 +10,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 const ActionScreen = (props) => {
-  const action = 'replenishment';
   return (
     <div>
-      <Header />
-      <Sidebar action={action}/>
+      <Header title='Unified Store Walk'/>
+      {/* <Sidebar action={action}/> */}
     <div className='action-screen' >
       <Container>
         <Row>
@@ -35,7 +34,7 @@ const ActionScreen = (props) => {
 
         <Row>
           <Col>
-            <Button className='action-btn'>Skip</Button>
+            <Button className='action-btn replenishment'>Replenish</Button>
           </Col>
         </Row>
 

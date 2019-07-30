@@ -6,8 +6,8 @@ import {FaChevronRight, FaChevronLeft, FaCog} from 'react-icons/fa';
 
 const Footer = (props) => {
 		const {mainMenu} = props;
-		const logoMargin = mainMenu ? 'with-margin' : ''
-    const showCog = !mainMenu ? (
+		const logoMargin = false ? 'with-margin' : ''
+    const showCog = false ? (
 			<Nav.Item className={`settings-item ${logoMargin}`}>
 				<Button>
 					<FaCog/>

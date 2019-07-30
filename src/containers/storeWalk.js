@@ -7,23 +7,28 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
+import StoreWalkButton from '../components/Button/storeWalk';
 
 const mockItems = [
   {
     name: 'Produce',
-    count: 15
+    count: 15,
+    type: 'replenishment'
   },
   {
     name: 'Seafood',
-    count: 7
+    count: 7,
+    type: 'adjustments'
   },
   {
     name: 'Drug/GM',
-    count: 18
+    count: 18,
+    type: 'psa'
   },
   {
     name: 'Dairy',
-    count: 3
+    count: 3,
+    type: 'skip'
   }
 ]
 
@@ -33,7 +38,7 @@ class StoreWalk extends React.Component {
     return (
       <div >
         <Header title='Unified Store Walk' />
-        <Sidebar/>
+        {/* <Sidebar/> */}
 
         <div className="store-walk">
           <Container>
@@ -47,11 +52,12 @@ class StoreWalk extends React.Component {
               {
                 mockItems.map((department) => {
                   return (
-                    <Row>
+                    <Row style={{marginBottom: '1em'}}>
                       <Col>
-                        <Button >{department.name}
+                        <StoreWalkButton label={department.name} />
+                        {/* <Button >{department.name} */}
                           {/* <Badge variant="light" style={{height:'40px', width:'40px', borderRadius: '20px', textAlign: 'center', paddingTop: '15px', float: 'right', backgroundColor: 'red', color: 'white', marginBottom: '30px'}}>{department.count}</Badge> */}
-                        </Button>
+                        {/* </Button> */}
                       
                       </Col>
                     </Row>
@@ -63,7 +69,8 @@ class StoreWalk extends React.Component {
 
             <Row>
               <Col>
-                <Button>Traditional Walk</Button>
+                <StoreWalkButton label='Traditional Walk'/>
+                {/* <Button>Traditional Walk</Button> */}
               </Col>
             </Row>
           </Container>

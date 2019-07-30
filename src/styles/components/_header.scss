@@ -7,6 +7,11 @@
     padding-left:0px;
     padding-right:0px;
     z-index: $front;
+    
+    .dropdown-item{
+        background-color: $secondary;
+        color: $dark-grey;
+    }
 
     svg {
         height: $header-svg-size;
@@ -70,11 +75,25 @@
             width:40px
         }
 
+        .dropdown-toggle{
+            padding-bottom:0px;
+            padding-left:0px;
+            padding-top:0px;
+
+        }
+
         .signout-btn{
             padding-bottom: 0px;
             padding-top: 0px;
             margin-bottom:0.250em;
         }
+
+
+            a {
+                font-size: $header-font-mid;
+                margin-left: 1em;
+            }
+    
     }
 
 
