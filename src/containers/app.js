@@ -4,7 +4,7 @@ import FloatingActionButton from '../components/Button/floatingAction';
 const App = (props) => {
   return (
     <div className='app'>
-      <FloatingActionButton/>
+      {/* <FloatingActionButton/> */}
       {props.children}
     </div>
   );

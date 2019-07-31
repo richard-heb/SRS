@@ -6,12 +6,14 @@ const MenuLeft = (props) => {
 	const action = 'adjustments'
     return (
 			<div className={`menu-left ${action}`}>
-					<div className="new-link"> 
+					{/* <div className="new-link">  */}
 						<button><FaReply/></button>
-					</div>
-					<div className="new-link"> 
-						<button><FaBarcode/></button>
-					</div>
+					{/* </div> */}
+					{/* <div className="new-link">  */}
+						<button>
+							<FaBarcode/>
+							</button>
+					{/* </div> */}
 
 			</div>
     );

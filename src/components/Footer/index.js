@@ -5,8 +5,8 @@ import Button from 'react-bootstrap/Button';
 import {FaChevronRight, FaChevronLeft, FaCog} from 'react-icons/fa';
 
 const Footer = (props) => {
-		const {mainMenu} = props;
-		const logoMargin = false ? 'with-margin' : ''
+		const {mainMenu, withMargin} = props;
+		const logoMargin = withMargin ? 'with-margin' : ''
     const showCog = false ? (
 			<Nav.Item className={`settings-item ${logoMargin}`}>
 				<Button>

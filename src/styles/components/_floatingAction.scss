@@ -1,6 +1,6 @@
 #floating-action{
-  background-color: $secondary;
-  color: black;
+  background-color: $primary;
+  color:$secondary;
   position: fixed;
   bottom: 0;
   right:0;
@@ -33,13 +33,19 @@
 }
 
 #overlay {
-  border-radius: .25rem;
-  position: fixed;
-  width: 74%;
-  height: 1em;
-  right: 1000;
-  background-color: rgba(255,255,255, .2);
-  z-index: 20000; 
+  position: absolute;
+    background-color:rgba(255,255,255, .2);
+    /*dim the background*/
+    margin-top: .1em;
+    margin-left: .74em;
+    margin-right: .70em;
+    top:0;
+    left:0;
+    width: -webkit-fill-available;
+    height:50%;
+    color:black;
+    text-align: center;
+    border-radius: .1em;
 }
 
 

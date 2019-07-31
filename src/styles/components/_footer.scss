@@ -10,7 +10,7 @@
     padding: 0px;
 
     &.with-margin{
-      margin-left: .5em;
+      margin-left: $header;
     }
   }
 
@@ -29,6 +29,7 @@
   }
 
   @media (max-width:$break-xs){
+    // padding-left: $header;
     button{
       font-size:$header-font-min;
     }

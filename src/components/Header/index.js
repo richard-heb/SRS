@@ -15,7 +15,7 @@ const MenuTop = (props) => {
   const logoMargin = mainMenu ? 'main' : '';
   const showMenuBars = !mainMenu ? (
     <Nav.Item className='menu-toggle-item'>
-      <Button href="/"><FaBars className='menu-toggle'/></Button>
+      <Button href="/" style={{marginLeft: '.4em'}}><FaBars className='menu-toggle'/></Button>
     </Nav.Item>) : (<div/>);
   
   return (

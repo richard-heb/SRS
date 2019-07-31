@@ -26,12 +26,14 @@
         background-color: $primary;
     }
 
-    .new-link{
+    button{
         background-color:$orange;
         height: $header;
         width: $header;
         line-height: $header;
         height: $header;
+        border:none;
+        border-bottom: 1px solid $background;
 
         
     }
@@ -41,9 +43,20 @@
         padding-top: $header-min;
         width: $header-min;
 
-        .new-link {
-            height: $header-min;
-            width: $header-min;
-        }
+        // .new-link {
+        //     height: $header-min;
+        //     width: $header-min;
+
+            button{
+                height: auto;
+                width: $header-min;
+                padding-top:0px;
+            }
+
+            svg {
+                height: 1em;
+                width: 1em;
+            }
+        // }
     }
 }

@@ -13,7 +13,7 @@ const ActionScreen = (props) => {
   return (
     <div>
       <Header title='Unified Store Walk'/>
-      {/* <Sidebar action={action}/> */}
+      <Sidebar />
     <div className='action-screen' >
       <Container>
         <Row>
@@ -34,7 +34,10 @@ const ActionScreen = (props) => {
 
         <Row>
           <Col>
-            <Button className='action-btn replenishment'>Replenish</Button>
+            <Button className='action-btn adjustments'>
+              <div id="overlay-action-btn"></div>
+              Replenish
+            </Button>
           </Col>
         </Row>
 
@@ -45,7 +48,7 @@ const ActionScreen = (props) => {
             <div className='label' >Skip</div>
           </Button> */}
           
-      <Footer  />
+      <Footer withMargin={true} />
     </div>
     {/* <div style={{ position:'absolute', bottom: '57px', width: '100%', paddingLeft:'56px'}}>
       <div style={{border:'1px solid red', textAlign:'center'}}>

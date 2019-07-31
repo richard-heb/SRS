@@ -67,7 +67,7 @@ class StoreWalk extends React.Component {
             {/* </div> */}
             <hr/>
 
-            <Row>
+            <Row className='bottom-row'>
               <Col>
                 <StoreWalkButton label='Traditional Walk'/>
                 {/* <Button>Traditional Walk</Button> */}
