@@ -51,12 +51,13 @@ const locs =[
 
 
 const TabSection = (props) => {
+  const {actionType} = props;
   return (
     <div className='tab-section'>
       <Tabs defaultActiveKey="LOC" id="location-ss-tabs">
         <Tab eventKey="LOC" title="LOC">
-          <LocationTable/>
-          <PsaLocationTable locations={locs}/>
+          <LocationTable actionType={actionType}/>
+          <PsaLocationTable locations={locs} actionType={actionType} />
         </Tab>
         <Tab eventKey="SS" title="SS">
           <StoreStockTable/>

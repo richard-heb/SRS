@@ -1,7 +1,9 @@
 import {SET_STATE} from './actions';
 
 const initialState = {
-  loading: false
+  loading: false,
+  toastOpen: false,
+  toastMessage: ''
 }
 
 const applicationReducer = (state = initialState, action) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import SubHeader from '../components/Header/subHeader';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import TabSection from '../components/TabSection';
@@ -8,12 +9,23 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
+import {FaBarcode, FaReply} from 'react-icons/fa';
+import FloatingAction from '../components/Button/floatingAction';
+
 
 const ActionScreen = (props) => {
+  // const {actionType, alertMessage, alertType} = props;
+  const actionType= 'replenishment';
+  const alertMessage='this is an alert message! '
+  const alertType = 'warning'
   return (
     <div>
       <Header title='Unified Store Walk'/>
-      <Sidebar />
+      <div className='sub-header'>
+        <button ><FaReply  /></button> 
+        <button ><FaBarcode/></button> 
+      </div>
     <div className='action-screen' >
       <Container>
         <Row>
@@ -26,9 +38,24 @@ const ActionScreen = (props) => {
             <Form/>
           </Col>
         </Row>
+        {
+          (alertMessage) ? (
+            <Row>
+              <Col>
+                <Alert variant={alertType} >
+                  {alertMessage}
+                </Alert>
+              </Col>
+            </Row>
+          ) : (<div/>)
+        }
         <Row>
           <Col>
-            <TabSection/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <TabSection actionType={actionType}/>
           </Col>
         </Row>
 
@@ -42,21 +69,8 @@ const ActionScreen = (props) => {
         </Row>
 
       </Container>
-
-
-      {/* <Button className='action'  style={{position: 'absolute', bottom:'60px', marginLeft: '15px', marginRight: '15px', width:'100%', marginRight:'57px'}} >
-            <div className='label' >Skip</div>
-          </Button> */}
-          
       <Footer withMargin={true} />
     </div>
-    {/* <div style={{ position:'absolute', bottom: '57px', width: '100%', paddingLeft:'56px'}}>
-      <div style={{border:'1px solid red', textAlign:'center'}}>
-          <div style={{border:'1px solid green',marginLeft: '15px',marginRight: '15px'}}>
-            <Button block style={{marginTop:'10px', marginBottom: '25px'}}>Skip</Button>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

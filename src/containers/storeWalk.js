@@ -8,6 +8,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import StoreWalkButton from '../components/Button/storeWalk';
+import { bindActionCreators } from 'redux';
+import {connect} from 'react-redux';
+import {openToast} from '../redux/application/actions'
+
 
 const mockItems = [
   {
@@ -33,6 +37,10 @@ const mockItems = [
 ]
 
 class StoreWalk extends React.Component {
+  componentDidMount(){
+    const {actions}  = this.props;
+    actions.openToast('dfasdfasdfasdfasdfd');
+  }
 
   render() {
     return (
@@ -81,4 +89,8 @@ class StoreWalk extends React.Component {
   }
 }
 
-export default StoreWalk;
+const mapDispatchToProps = dispatch => {
+  return {actions: bindActionCreators({openToast}, dispatch)}
+}
+
+export default connect(null, mapDispatchToProps)(StoreWalk);
