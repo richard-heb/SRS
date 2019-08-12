@@ -18,7 +18,7 @@ const routes = [
     exact: true
   },
   {
-    path: '/action-screen',
+    path: '/action-screen/:actionType',
     component: ActionScreen,
     exact: true
   },
