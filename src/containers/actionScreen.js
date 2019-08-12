@@ -12,19 +12,21 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import {FaBarcode, FaReply} from 'react-icons/fa';
 import FloatingAction from '../components/Button/floatingAction';
+import { Redirect} from 'react-router-dom';
 
 
 const ActionScreen = (props) => {
-  // const {actionType, alertMessage, alertType} = props;
-  const actionType= 'replenishment';
+  console.log(props.match.params);
+  const {actionType} = props.match.params
+  // const actionType= 'replenishment';
   const alertMessage='this is an alert message! '
   const alertType = 'warning'
   return (
     <div>
       <Header title='Unified Store Walk'/>
-      <div className='sub-header'>
-        <button ><FaReply  /></button> 
-        <button ><FaBarcode/></button> 
+      <div className={`sub-header ${actionType}`}>
+        <button className={`${actionType}`} ><a href="#/store-walk"><FaReply  /></a></button> 
+        <button className={`${actionType}`}><FaBarcode/></button> 
       </div>
     <div className='action-screen' >
       <Container>
@@ -61,9 +63,9 @@ const ActionScreen = (props) => {
 
         <Row>
           <Col>
-            <Button className='action-btn adjustments'>
+            <Button className={`action-btn ${actionType}`}>
               <div id="overlay-action-btn"></div>
-              Replenish
+              {actionType.toUpperCase()}
             </Button>
           </Col>
         </Row>

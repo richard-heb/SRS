@@ -133,11 +133,27 @@
   right: 0;
   z-index: $front;
 
+  &.replenishment {
+    background-color: $green;
+  }
+
+  &.psa {
+    background-color: $purple;
+  }
+
   button{
     padding-left: 1.2em;
     background-color: $orange;
     border:none;
     border-right: 1px solid $background;
+
+    &.replenishment {
+      background-color: $green;
+    }
+  
+    &.psa {
+      background-color: $purple;
+    }
   }
 
   svg {

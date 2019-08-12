@@ -39,7 +39,7 @@ const mockItems = [
 class StoreWalk extends React.Component {
   componentDidMount(){
     const {actions}  = this.props;
-    actions.openToast('dfasdfasdfasdfasdfd');
+    // actions.openToast('dfasdfasdfasdfasdfd');
   }
 
   render() {
@@ -62,7 +62,7 @@ class StoreWalk extends React.Component {
                   return (
                     <Row style={{marginBottom: '1em'}}>
                       <Col>
-                        <StoreWalkButton label={department.name} />
+                        <StoreWalkButton label={department.name} actionType={department.type}/>
                         {/* <Button >{department.name} */}
                           {/* <Badge variant="light" style={{height:'40px', width:'40px', borderRadius: '20px', textAlign: 'center', paddingTop: '15px', float: 'right', backgroundColor: 'red', color: 'white', marginBottom: '30px'}}>{department.count}</Badge> */}
                         {/* </Button> */}
@@ -77,7 +77,7 @@ class StoreWalk extends React.Component {
 
             <Row className='bottom-row'>
               <Col>
-                <StoreWalkButton label='Traditional Walk'/>
+                <StoreWalkButton label='Traditional Walk' actionType='skip' />
                 {/* <Button>Traditional Walk</Button> */}
               </Col>
             </Row>
