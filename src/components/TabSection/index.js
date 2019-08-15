@@ -14,39 +14,7 @@ const locs =[
     segment: 6,
     shelf: 2,
     capacity: 100
-  },
-  // {
-  //   area: 11,
-  //   aisle: 2,
-  //   side: 'B',
-  //   segment: 6,
-  //   shelf: 2,
-  //   capacity: 100
-  // },
-  // {
-  //   area: 11,
-  //   aisle: 2,
-  //   side: 'B',
-  //   segment: 6,
-  //   shelf: 2,
-  //   capacity: 100
-  // },
-  // {
-  //   area: 11,
-  //   aisle: 2,
-  //   side: 'B',
-  //   segment: 6,
-  //   shelf: 2,
-  //   capacity: 100
-  // },
-  // {
-  //   area: 11,
-  //   aisle: 2,
-  //   side: 'B',
-  //   segment: 6,
-  //   shelf: 2,
-  //   capacity: 100
-  // },
+  }
 ]
 
 

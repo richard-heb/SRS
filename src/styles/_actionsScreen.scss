@@ -131,7 +131,7 @@
   background-color:rgba(228, 118, 5, 1);
   left: 0;
   right: 0;
-  z-index: $front;
+  z-index: $front - 1;
 
   &.replenishment {
     background-color: $green;

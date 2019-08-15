@@ -18,7 +18,6 @@ import { Redirect} from 'react-router-dom';
 const ActionScreen = (props) => {
   console.log(props.match.params);
   const {actionType} = props.match.params
-  // const actionType= 'replenishment';
   const alertMessage='this is an alert message! '
   const alertType = 'warning'
   return (
