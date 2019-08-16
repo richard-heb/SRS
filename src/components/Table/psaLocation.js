@@ -39,22 +39,27 @@ const PsaLocationTable = (props) => {
       <Table responsive >
         <thead>
           <tr >
-            <th className='psa' colSpan={1}  >{psaLabel}</th>
+            <th className='psa' colSpan={6}  >{psaLabel}</th>
           </tr>
           <tr>
-            <th className='psa-header' style={{textAlign:'center'}}>Area / Aisle / Side / Segment / Shelf / {capacityLabel}</th>
-            {/* <th className='psa-header'>Aisle</th>
+            <th className='psa-header'>Area</th>
+            <th className='psa-header'>Aisle</th>
             <th className='psa-header'>Side</th>
             <th className='psa-header'>Sgmnt</th>
             <th className='psa-header'>Shelf</th>
-            <th className='psa-header'>Tot Cap</th> */}
+            <th className='psa-header'>Cap</th>
           </tr>
         </thead>
         <tbody>
           {locations.map((location) => {
             return (
               <tr>
-                <td style={{textAlign: 'center'}}>{location.area} / {location.aisle} / {location.side} / {location.segment} / {location.shelf} / {location.capacity}</td>
+                <td className='psa-data'>{location.area}</td>
+                <td className='psa-data'>{location.aisle}</td>
+                <td className='psa-data'>{location.side}</td>
+                <td className='psa-data'>{location.segment}</td>
+                <td className='psa-data'>{location.shelf}</td>
+                <td className='psa-data'>{location.capacity}</td>
               </tr>
             );
           })}
@@ -63,7 +68,12 @@ const PsaLocationTable = (props) => {
             extraPsas.map((location) => {
               return (
                 <tr>
-                  <td style={{textAlign: 'center'}}>{location.area} / {location.aisle} / {location.side} / {location.segment} / {location.shelf} / {location.capacity}</td>
+                <td className='psa-data'>{location.area}</td>
+                <td className='psa-data'>{location.aisle}</td>
+                <td className='psa-data'>{location.side}</td>
+                <td className='psa-data'>{location.segment}</td>
+                <td className='psa-data'>{location.shelf}</td>
+                <td className='psa-data'>{location.capacity}</td>
                 </tr>
               );
             })

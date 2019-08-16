@@ -37,8 +37,8 @@ const LocTable = (props) => {
               </>
             ) : (
               <>
-              <th></th>
-              <td></td>
+              <th>User Code</th>
+              <td>Manual</td>
               </>
             )
           }

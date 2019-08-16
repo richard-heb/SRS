@@ -27,7 +27,7 @@ const TabSection = (props) => {
           <LocationTable actionType={actionType}/>
           <PsaLocationTable locations={locs} actionType={actionType} />
         </Tab>
-        <Tab eventKey="SS" title="SS">
+        <Tab eventKey="PI" title="PI">
           <StoreStockTable/>
           <SalesAndForecastTable/>
         </Tab>

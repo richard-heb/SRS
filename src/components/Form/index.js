@@ -29,11 +29,11 @@ const Basic = () => (
       {({ isSubmitting }) => (
         <Form  >
          
-              <button type="submit" disabled={isSubmitting} >
+              <button type="submit" disabled={isSubmitting} style={{borderRadius: '2px', border: 'none'}} >
                 UPC
               </button>
 
-            <Field type="upc" name="upc" className='form-control' style={{borderRadius:'1px', width: 'fill'}} />
+            <Field type="upc" name="upc" className='form-control' style={{borderRadius:'2px', width: 'fill', border:'none'}} />
 
 
         

@@ -8,8 +8,8 @@ const StoreStockTable = (props) => {
         <tr>
           <th>Prc $</th>
           <td>Beauty</td>
-          <th>GP</th>
-          <td>0</td>
+          <th>7d</th>
+          <td>1/3/3</td>
           <th>WO</th>
           <td>1</td>
         </tr>
@@ -38,12 +38,12 @@ const StoreStockTable = (props) => {
           <td>1/3/3</td>
         </tr>
         <tr>
-          <th>DOS</th>
+          <th>Promo</th>
           <td>N</td>
-          <th>30d</th>
+          <th>Coupon</th>
           <td>N</td>
-          <th>7d</th>
-          <td>1/3/3</td>
+          <th>TPR</th>
+          <td>Y</td>
         </tr>
       </tbody>
     </Table>
