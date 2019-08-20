@@ -1,0 +1,101 @@
+#floating-action{
+  background-color: $primary;
+  color:$secondary;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  margin-bottom: 5em;
+  margin-right: .5em;
+  border-radius: 2em;
+  height: 4em;
+  width: 4em;
+  z-index: $front;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  svg{
+    height: 2em;
+    width:2em;
+  }
+}
+
+#floating-action-two{
+  background-color: $primary;
+  color:$secondary;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  margin-bottom: 10em;
+  margin-right: .5em;
+  border-radius: 2em;
+  height: 4em;
+  width: 4em;
+  z-index: $front;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  svg{
+    height: 2em;
+    width: 2em;
+  }
+}
+
+.store-walk-btn{
+    width:inherit;
+    background-color: $primary;
+    color: $secondary;
+    border: none;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#overlay {
+  position: absolute;
+    background-color:rgba(255,255,255, .2);
+    /*dim the background*/
+    margin-top: .1em;
+    margin-left: .74em;
+    margin-right: .70em;
+    top:0;
+    left:0;
+    width: -webkit-fill-available;
+    height:50%;
+    color:black;
+    text-align: center;
+    border-radius: .1em;
+}
+
+
+
+
+@media (max-width:$break-xs){
+  #floating-action{
+    height: 3em;
+    width: 3em;
+    margin-bottom: 2.5em;
+
+    svg{
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+
+  #floating-action-two{
+    height: 3em;
+    width: 3em;
+    margin-bottom: 6em;
+
+    svg{
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+}

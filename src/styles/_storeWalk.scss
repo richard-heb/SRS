@@ -1,0 +1,40 @@
+.store-walk {
+  margin-top: $header;
+  // margin-left: $header;
+
+  .bottom-row {
+    margin-bottom: 10em;
+  }
+
+  .page-header {
+    line-height: $header;
+    height: $header;
+    text-align: center;
+    font-size: $header-font;
+    color: $dark-grey;
+  }
+
+  button {
+    background-color: $primary;
+    width: 100%;
+    height: $header;
+    margin: .5em;
+    font-weight:bold;
+    letter-spacing: 0.1em;
+  }
+
+
+  @media (max-width:$break-xs){
+    // margin-left: $header-min;
+    margin-top: $header-min;
+
+    .page-header {
+      font-size: $header-font-min;
+    }
+
+    button {
+      font-size: $header-font-min;
+      height: 3em;
+    }
+  }
+}
