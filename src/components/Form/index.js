@@ -1,6 +1,4 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const Basic = () => (
@@ -11,12 +9,7 @@ const Basic = () => (
         let errors = {};
         if (!values.upc) {
           errors.email = 'Required';
-        } 
-        // else if (
-        //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        // ) {
-        //   errors.email = 'Invalid email address';
-        // }
+        }
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -27,16 +20,22 @@ const Basic = () => (
       }}
     >
       {({ isSubmitting }) => (
-        <Form  >
-         
-              <button type="submit" disabled={isSubmitting} style={{borderRadius: '2px', border: 'none'}} >
-                UPC
-              </button>
+        <Form>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            style={{ borderRadius: '2px', border: 'none' }}
+          >
+            UPC
+          </button>
 
-            <Field type="upc" name="upc" className='form-control' style={{borderRadius:'2px', width: 'fill', border:'none'}} />
+          <Field
+            type="upc"
+            name="upc"
+            className="form-control"
+            style={{ borderRadius: '2px', width: 'fill', border: 'none' }}
+          />
 
-
-        
           <ErrorMessage name="upc" component="div" />
         </Form>
       )}

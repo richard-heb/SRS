@@ -1,6 +1,5 @@
 .store-walk {
   margin-top: $header;
-  // margin-left: $header;
 
   .bottom-row {
     margin-bottom: 10em;
@@ -18,14 +17,12 @@
     background-color: $primary;
     width: 100%;
     height: $header;
-    margin: .5em;
-    font-weight:bold;
+    margin: 0.5em;
+    font-weight: bold;
     letter-spacing: 0.1em;
   }
 
-
-  @media (max-width:$break-xs){
-    // margin-left: $header-min;
+  @media (max-width: $break-xs) {
     margin-top: $header-min;
 
     .page-header {

@@ -1,12 +1,12 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-const LocTable = (props) => {
-  const {actionType} = props;
-  const capacityLabel = actionType && actionType === 'psa' ? 'Cap' : 'Tot Cap'
+const LocTable = props => {
+  const { actionType } = props;
+  const capacityLabel = actionType && actionType === 'psa' ? 'Cap' : 'Tot Cap';
   const fhd = actionType === 'psa' ? false : true;
   return (
-    <Table responsive >
+    <Table responsive>
       <tbody>
         <tr>
           <th>Dept</th>
@@ -29,23 +29,21 @@ const LocTable = (props) => {
         <tr>
           <th>Promo</th>
           <td>N</td>
-          {
-            fhd ? (
-              <>
+          {fhd ? (
+            <>
               <th>F/H/D</th>
               <td>1/3/3</td>
-              </>
-            ) : (
-              <>
+            </>
+          ) : (
+            <>
               <th>User Code</th>
               <td>Manual</td>
-              </>
-            )
-          }
+            </>
+          )}
         </tr>
       </tbody>
     </Table>
   );
-}
+};
 
 export default LocTable;

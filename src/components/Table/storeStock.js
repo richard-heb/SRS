@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-const StoreStockTable = (props) => {
+const StoreStockTable = props => {
   return (
     <Table responsive>
       <tbody>
@@ -48,6 +48,6 @@ const StoreStockTable = (props) => {
       </tbody>
     </Table>
   );
-}
+};
 
 export default StoreStockTable;

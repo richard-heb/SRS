@@ -1,96 +1,82 @@
 import React from 'react';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import Tabs from '../components/TabSection';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
-import StoreWalkButton from '../components/Button/storeWalk';
 import { bindActionCreators } from 'redux';
-import {connect} from 'react-redux';
-import {openToast} from '../redux/application/actions'
+import { connect } from 'react-redux';
 
+import Header from '../components/Header';
+import StoreWalkButton from '../components/Button/storeWalk';
+import { openToast } from '../redux/application/actions';
 
 const mockItems = [
   {
     name: 'Produce',
     count: 15,
-    type: 'replenishment'
+    type: 'replenishment',
   },
   {
     name: 'Seafood',
     count: 7,
-    type: 'adjustments'
+    type: 'adjustments',
   },
   {
     name: 'Drug/GM',
     count: 18,
-    type: 'psa'
+    type: 'psa',
   },
   {
     name: 'Dairy',
     count: 3,
-    type: 'skip'
-  }
-]
+    type: 'skip',
+  },
+];
 
 class StoreWalk extends React.Component {
-  componentDidMount(){
-    const {actions}  = this.props;
-    // actions.openToast('dfasdfasdfasdfasdfd');
-  }
-
   render() {
     return (
-      <div >
-        <Header title='Unified Store Walk' />
-        {/* <Sidebar/> */}
-
+      <div>
+        <Header title="Unified Store Walk" />
         <div className="store-walk">
           <Container>
             <Row>
               <Col>
-                <div className='page-header'>Please select department</div>
+                <div className="page-header">Please select department</div>
               </Col>
             </Row>
+            {mockItems.map(department => {
+              return (
+                <Row style={{ marginBottom: '1em' }}>
+                  <Col>
+                    <StoreWalkButton
+                      label={department.name}
+                      actionType={department.type}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
 
-            {/* <div className='departments' style={{marginTop: '1em'}}> */}
-              {
-                mockItems.map((department) => {
-                  return (
-                    <Row style={{marginBottom: '1em'}}>
-                      <Col>
-                        <StoreWalkButton label={department.name} actionType={department.type}/>
-                        {/* <Button >{department.name} */}
-                          {/* <Badge variant="light" style={{height:'40px', width:'40px', borderRadius: '20px', textAlign: 'center', paddingTop: '15px', float: 'right', backgroundColor: 'red', color: 'white', marginBottom: '30px'}}>{department.count}</Badge> */}
-                        {/* </Button> */}
-                      
-                      </Col>
-                    </Row>
-                  );
-                })
-              }
-            {/* </div> */}
-            <hr/>
+            <hr />
 
-            <Row className='bottom-row'>
+            <Row className="bottom-row">
               <Col>
-                <StoreWalkButton label='Traditional Walk' actionType='skip' />
-                {/* <Button>Traditional Walk</Button> */}
+                <StoreWalkButton label="Traditional Walk" actionType="skip" />
               </Col>
             </Row>
           </Container>
         </div>
-
       </div>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => {
-  return {actions: bindActionCreators({openToast}, dispatch)}
-}
+  return { actions: bindActionCreators({ openToast }, dispatch) };
+};
 
-export default connect(null, mapDispatchToProps)(StoreWalk);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(StoreWalk);

@@ -4,25 +4,23 @@
   margin-left: $one-unit;
   margin-right: $one-unit;
 
-
-  .menu-btn{
+  .menu-btn {
     background-color: $secondary;
     color: $dark-grey;
-    width:100%;
-    border-radius: .02em;
+    width: 100%;
+    border-radius: 0.02em;
     margin-top: $one-unit;
     margin-bottom: $one-unit;
     border: none;
     font-weight: 500;
   }
 
-  @media (max-width:$break-xs){
+  @media (max-width: $break-xs) {
     margin-top: $header-min;
     margin-bottom: $header-min;
 
-    .menu-btn{
+    .menu-btn {
       font-size: 10px;
     }
-
   }
 }

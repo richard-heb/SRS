@@ -1,41 +1,41 @@
-import {all, takeEvery, put} from 'redux-saga/effects';
-import {SET_STATE, APP_LOADING, OPEN_TOAST, CLOSE_TOAST } from './actions';
+import { all, takeEvery, put } from 'redux-saga/effects';
+import { SET_STATE, APP_LOADING, OPEN_TOAST, CLOSE_TOAST } from './actions';
 
-export function* appLoading({payload}){
-  const {loading} = payload;
+export function* appLoading({ payload }) {
+  const { loading } = payload;
   yield put({
     type: SET_STATE,
     payload: {
-      loading
-    }
-  })
+      loading,
+    },
+  });
 }
 
-export function* openToast({payload}){
-  const {message} = payload;
+export function* openToast({ payload }) {
+  const { message } = payload;
   yield put({
-    type:SET_STATE,
+    type: SET_STATE,
     payload: {
-      toastOpen: true, 
-      toastMessage: message
-    }
-  })
+      toastOpen: true,
+      toastMessage: message,
+    },
+  });
 }
 
-export function* closeToast(){
+export function* closeToast() {
   yield put({
-    type:SET_STATE,
+    type: SET_STATE,
     payload: {
-      toastOpen: false, 
-      toastMessage: ''
-    }
-  })
+      toastOpen: false,
+      toastMessage: '',
+    },
+  });
 }
 
 export default function* rootSaga() {
   yield all([
     takeEvery(APP_LOADING, appLoading),
     takeEvery(OPEN_TOAST, openToast),
-    takeEvery(CLOSE_TOAST, closeToast)
-  ])
+    takeEvery(CLOSE_TOAST, closeToast),
+  ]);
 }

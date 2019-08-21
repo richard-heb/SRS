@@ -1,22 +1,18 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import {FaBarcode, FaReply} from 'react-icons/fa';
+import { FaBarcode, FaReply } from 'react-icons/fa';
 
-const MenuLeft = (props) => {
-	const action = 'adjustments'
-    return (
-			<div className={`menu-left ${action}`}>
-					{/* <div className="new-link">  */}
-						<button><FaReply/></button>
-					{/* </div> */}
-					{/* <div className="new-link">  */}
-						<button>
-							<FaBarcode/>
-							</button>
-					{/* </div> */}
-
-			</div>
-    );
-}
+const MenuLeft = props => {
+  const action = 'adjustments';
+  return (
+    <div className={`menu-left ${action}`}>
+      <button>
+        <FaReply />
+      </button>
+      <button>
+        <FaBarcode />
+      </button>
+    </div>
+  );
+};
 
 export default MenuLeft;
