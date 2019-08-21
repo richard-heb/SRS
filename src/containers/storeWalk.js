@@ -3,12 +3,9 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
 import Header from '../components/Header';
 import StoreWalkButton from '../components/Button/storeWalk';
-import { openToast } from '../redux/application/actions';
 
 const mockItems = [
   {
@@ -33,50 +30,39 @@ const mockItems = [
   },
 ];
 
-class StoreWalk extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header title="Unified Store Walk" />
-        <div className="store-walk">
-          <Container>
-            <Row>
-              <Col>
-                <div className="page-header">Please select department</div>
-              </Col>
-            </Row>
-            {mockItems.map(department => {
-              return (
-                <Row style={{ marginBottom: '1em' }}>
-                  <Col>
-                    <StoreWalkButton
-                      label={department.name}
-                      actionType={department.type}
-                    />
-                  </Col>
-                </Row>
-              );
-            })}
+export const StoreWalk = () => {
+  return (
+    <div>
+      <Header title="Unified Store Walk" />
+      <div className="store-walk">
+        <Container>
+          <Row>
+            <Col>
+              <div className="page-header">Please select department</div>
+            </Col>
+          </Row>
+          {mockItems.map(department => {
+            return (
+              <Row style={{ marginBottom: '1em' }}>
+                <Col>
+                  <StoreWalkButton
+                    label={department.name}
+                    actionType={department.type}
+                  />
+                </Col>
+              </Row>
+            );
+          })}
 
-            <hr />
+          <hr />
 
-            <Row className="bottom-row">
-              <Col>
-                <StoreWalkButton label="Traditional Walk" actionType="skip" />
-              </Col>
-            </Row>
-          </Container>
-        </div>
+          <Row className="bottom-row">
+            <Col>
+              <StoreWalkButton label="Traditional Walk" actionType="skip" />
+            </Col>
+          </Row>
+        </Container>
       </div>
-    );
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return { actions: bindActionCreators({ openToast }, dispatch) };
+    </div>
+  );
 };
-
-export default connect(
-  null,
-  mapDispatchToProps,
-)(StoreWalk);

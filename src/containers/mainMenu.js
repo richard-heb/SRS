@@ -4,7 +4,7 @@ import MenuButton from '../components/MenuButton';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const mainMenu = () => {
+export const MainMenu = () => {
   return (
     <div>
       <Header mainMenu={true} title="Store Replenishment Service" />
@@ -25,5 +25,3 @@ const mainMenu = () => {
     </div>
   );
 };
-
-export default mainMenu;

@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Table from 'react-bootstrap/Table';
 
-const SalesAndForecastTable = props => {
+export const SalesForecastTable = props => {
   return (
     <Table responsive>
       <thead>
@@ -36,5 +37,3 @@ const SalesAndForecastTable = props => {
     </Table>
   );
 };
-
-export default SalesAndForecastTable;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-const PsaLocationTable = props => {
+export const PSALocationTable = props => {
   const { locations, actionType } = props;
   const locationCount = locations.length;
   const psaLabel =
@@ -85,5 +85,3 @@ const PsaLocationTable = props => {
     </div>
   );
 };
-
-export default PsaLocationTable;

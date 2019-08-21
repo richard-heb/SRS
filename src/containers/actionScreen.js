@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import TabSection from '../components/TabSection';
 import Form from '../components/Form';
 
-const ActionScreen = props => {
+export const ActionScreen = props => {
   const { actionType } = props.match.params;
 
   const alertMessage = 'this is an alert message! ';
@@ -75,5 +75,3 @@ const ActionScreen = props => {
     </div>
   );
 };
-
-export default ActionScreen;

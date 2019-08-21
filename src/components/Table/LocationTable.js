@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Table from 'react-bootstrap/Table';
 
-const LocTable = props => {
+export const LocactionTable = props => {
   const { actionType } = props;
   const capacityLabel = actionType && actionType === 'psa' ? 'Cap' : 'Tot Cap';
   const fhd = actionType === 'psa' ? false : true;
@@ -45,5 +46,3 @@ const LocTable = props => {
     </Table>
   );
 };
-
-export default LocTable;
