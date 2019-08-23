@@ -11,6 +11,7 @@ import StoreWalkButton from '../components/Button/storeWalk';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 import {openToast} from '../redux/application/actions'
+import {Link} from 'react-router-dom';
 
 
 const mockItems = [
@@ -77,7 +78,9 @@ class StoreWalk extends React.Component {
 
             <Row className='bottom-row'>
               <Col>
-                <StoreWalkButton label='Traditional Walk' actionType='skip' />
+                <StoreWalkButton label="Traditional Walk" actionType={'traditional'}/>
+
+                {/* <Link to="/traditional-walk" ><Button className='store-walk-btn'> <div id="overlay"></div>Traditional Walk</Button></Link> */}
                 {/* <Button>Traditional Walk</Button> */}
               </Col>
             </Row>

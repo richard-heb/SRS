@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 const LocTable = (props) => {
   const {actionType} = props;
   const capacityLabel = actionType && actionType === 'psa' ? 'Cap' : 'Tot Cap'
+  const totalCap = actionType && actionType === 'psa' ? '100' : '325';
   const fhd = actionType === 'psa' ? false : true;
   return (
     <Table responsive >
@@ -22,7 +23,7 @@ const LocTable = (props) => {
         </tr>
         <tr>
           <th>{capacityLabel}</th>
-          <td>8</td>
+          <td>{totalCap}</td>
           <th>Event</th>
           <td>N</td>
         </tr>

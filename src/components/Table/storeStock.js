@@ -15,7 +15,7 @@ const StoreStockTable = (props) => {
         </tr>
         <tr>
           <th>UOH</th>
-          <td>16oz</td>
+          <td>16</td>
           <th>Ord Case</th>
           <td>8</td>
           <th>PBill Case</th>
@@ -38,8 +38,8 @@ const StoreStockTable = (props) => {
           <td>1/3/3</td>
         </tr>
         <tr>
-          <th>Promo</th>
-          <td>N</td>
+          <th>Add</th>
+          <td>Y</td>
           <th>Coupon</th>
           <td>N</td>
           <th>TPR</th>

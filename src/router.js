@@ -5,6 +5,7 @@ import App from './containers/app';
 import StoreWalk from './containers/storeWalk';
 import MainMenu from './containers/mainMenu';
 import ActionScreen from './containers/actionScreen';
+import TraditionalWalk from './containers/traditionalWalk';
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
   {
     path: '/action-screen/:actionType',
     component: ActionScreen,
+    exact: true
+  },
+  {
+    path: '/traditional-walk',
+    component: TraditionalWalk,
     exact: true
   },
 ];
