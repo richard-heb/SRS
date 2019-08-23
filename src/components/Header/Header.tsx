@@ -1,6 +1,6 @@
 import Logo from './HEB-logo.svg';
 
-import React from 'react';
+import * as React from 'react';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -9,8 +9,12 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FaBars, FaSignOutAlt, FaUserCog, FaCog } from 'react-icons/fa';
 
-const MenuTop = props => {
-  const { mainMenu, title } = props;
+export interface HeaderProps {
+  mainMenu?: boolean;
+  title: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({ mainMenu, title }) => {
   const logoMargin = mainMenu ? 'main' : '';
   const showMenuBars = !mainMenu ? (
     <Nav.Item className="menu-toggle-item">
@@ -47,5 +51,3 @@ const MenuTop = props => {
     </Navbar>
   );
 };
-
-export default MenuTop;

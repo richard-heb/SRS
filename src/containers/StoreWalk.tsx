@@ -1,36 +1,49 @@
-import React from 'react';
+import * as React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Header from '../components/Header';
-import StoreWalkButton from '../components/Button/storeWalk';
+import { Header } from '../components/Header/Header';
+import { StoreWalkButton } from '../components/Button/StoreWalk';
 
-const mockItems = [
+export enum MockItemType {
+  Adjustments = 'adjustments',
+  Skip = 'skip',
+  Replenishment = 'replenishment',
+  PSA = 'psa',
+}
+
+export type MockItem = {
+  name: string;
+  count: number;
+  type: MockItemType;
+};
+
+const mockItems: MockItem[] = [
   {
     name: 'Produce',
     count: 15,
-    type: 'replenishment',
+    type: MockItemType.Replenishment,
   },
   {
     name: 'Seafood',
     count: 7,
-    type: 'adjustments',
+    type: MockItemType.Adjustments,
   },
   {
     name: 'Drug/GM',
     count: 18,
-    type: 'psa',
+    type: MockItemType.PSA,
   },
   {
     name: 'Dairy',
     count: 3,
-    type: 'skip',
+    type: MockItemType.Skip,
   },
 ];
 
-export const StoreWalk = () => {
+export const StoreWalk: React.FC = () => {
   return (
     <div>
       <Header title="Unified Store Walk" />

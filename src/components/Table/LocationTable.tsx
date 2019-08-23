@@ -1,11 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 
 import Table from 'react-bootstrap/Table';
 
-export const LocactionTable = props => {
-  const { actionType } = props;
-  const capacityLabel = actionType && actionType === 'psa' ? 'Cap' : 'Tot Cap';
-  const fhd = actionType === 'psa' ? false : true;
+export interface LocationTableProps {
+  actionType?: string;
+}
+
+export const LocationTable: React.FC<LocationTableProps> = ({ actionType }) => {
+  // TODO: creation actionType enum
+  const isPSA = actionType === 'psa';
+
+  const capacityLabel = isPSA ? 'Cap' : 'Tot Cap';
+  const fhd = !(actionType === 'psa');
+
   return (
     <Table responsive>
       <tbody>

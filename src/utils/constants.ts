@@ -1,4 +1,4 @@
-export const headerTitle = path => {
+export const headerTitle = (path: string) => {
   switch (path) {
     case '/store-walk':
       return 'Unified Store Walk';

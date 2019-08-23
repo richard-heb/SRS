@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -7,14 +7,17 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import { FaBarcode, FaReply } from 'react-icons/fa';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import TabSection from '../components/TabSection';
-import Form from '../components/Form';
+import { Header } from '../components/Header/Header';
+import { Footer } from '../components/Footer/Footer';
+import { TabSection } from '../components/TabSection/TabSection';
+import { BasicForm as Form } from '../components/Form/Form';
 
-export const ActionScreen = props => {
-  const { actionType } = props.match.params;
+// TODO: Create a shared actionType enum
+export interface ActionScreenProps {
+  actionType: string;
+}
 
+export const ActionScreen: React.FC<ActionScreenProps> = ({ actionType }) => {
   const alertMessage = 'this is an alert message! ';
   const alertType = 'success';
 

@@ -1,13 +1,30 @@
-import React from 'react';
+import * as React from 'react';
 import Table from 'react-bootstrap/Table';
 
-export const PSALocationTable = props => {
-  const { locations, actionType } = props;
+export interface PSALocation {
+  area: number;
+  aisle: number;
+  side: string;
+  segment: number;
+  shelf: number;
+  capacity: number;
+}
+
+export interface PSALocationTableProps {
+  locations: PSALocation[];
+  actionType?: string;
+}
+
+export const PSALocationTable: React.FC<PSALocationTableProps> = ({
+  locations,
+  actionType,
+}) => {
   const locationCount = locations.length;
-  const psaLabel =
-    actionType && actionType === 'psa'
-      ? 'PSA Location'
-      : `PSA Locations (${locationCount})`;
+
+  // TODO: create actionType enum
+  const isPSA = actionType === 'psa';
+
+  const psaLabel = isPSA ? 'PSA Location' : `PSA Locations (${locationCount})`;
 
   const extraPsas = [
     {

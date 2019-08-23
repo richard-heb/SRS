@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import Table from 'react-bootstrap/Table';
 
-const StoreStockTable = props => {
+export const StoreStockTable: React.FC = () => {
   return (
     <Table responsive>
       <tbody>

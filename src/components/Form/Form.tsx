@@ -1,15 +1,26 @@
-import React from 'react';
+import * as React from 'react';
+
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-const Basic = () => (
+export enum ErrorTypes {
+  Required = 'Required',
+}
+
+export type BasicErrorCollection = {
+  email?: string;
+};
+
+export const BasicForm: React.FC = () => (
   <div>
     <Formik
       initialValues={{ upc: '' }}
       validate={values => {
-        let errors = {};
+        const errors: BasicErrorCollection = {};
+
         if (!values.upc) {
-          errors.email = 'Required';
+          errors.email = ErrorTypes.Required;
         }
+
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -42,5 +53,3 @@ const Basic = () => (
     </Formik>
   </div>
 );
-
-export default Basic;

@@ -1,12 +1,17 @@
-import React from 'react';
+import * as React from 'react';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import { FaChevronRight, FaChevronLeft, FaCog } from 'react-icons/fa';
 
-const Footer = props => {
-  const { withMargin } = props;
+export interface FooterProps {
+  withMargin?: boolean;
+}
+
+export const Footer: React.FC<FooterProps> = ({ withMargin }) => {
   const logoMargin = withMargin ? 'with-margin' : '';
+
   const showCog = false ? (
     <Nav.Item className={`settings-item ${logoMargin}`}>
       <Button>
@@ -16,6 +21,7 @@ const Footer = props => {
   ) : (
     <div />
   );
+
   return (
     <Navbar className="footer" fixed="bottom">
       <Nav className="mr-auto">
@@ -33,5 +39,3 @@ const Footer = props => {
     </Navbar>
   );
 };
-
-export default Footer;
