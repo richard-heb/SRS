@@ -38,6 +38,11 @@ const routes: SRSRoute[] = [
     component: ActionScreen,
     exact: true,
   },
+  {
+    path: '/traditional-walk',
+    component: TraditionalWalk,
+    exact: true,
+  },
 ];
 
 export const SRSRouter: React.FC<SRSRouterProps> = ({ history }) => {

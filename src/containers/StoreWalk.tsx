@@ -14,11 +14,11 @@ export enum MockItemType {
   PSA = 'psa',
 }
 
-export type MockItem = {
+export interface MockItem {
   name: string;
   count: number;
   type: MockItemType;
-};
+}
 
 const mockItems: MockItem[] = [
   {
@@ -71,7 +71,10 @@ export const StoreWalk: React.FC = () => {
 
           <Row className="bottom-row">
             <Col>
-              <StoreWalkButton label="Traditional Walk" actionType="skip" />
+              <StoreWalkButton
+                label="Traditional Walk"
+                actionType="traditional"
+              />
             </Col>
           </Row>
         </Container>

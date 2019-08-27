@@ -1,5 +1,5 @@
 .action-screen {
-  margin-top: $header + 2em;
+  margin-top: $header + $header;
   margin-bottom: $header + 1em;
 
   .page-header {
@@ -91,15 +91,29 @@
     }
   }
 
-  .psa-header,
-  .psa-data {
-    padding-left: 4px;
-    padding-right: 4px;
+  .psa-row {
+    th,
+    td {
+      text-align: center;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    td {
+      background-color: #d3d3d3;
+    }
+
+    &.highlight {
+      td {
+        background-color: #ffffff;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+    }
   }
 
   @media (max-width: $break-xs) {
     margin-bottom: $header-min + 1em;
-    margin-top: $header-min + 1.9em;
+    margin-top: $header-min + $header-min;
 
     .action-btn {
       font-size: $header-font-min;
@@ -137,6 +151,7 @@
   // padding-left: .5em;
   position: fixed;
   top: $header;
+  height: $header;
   background-color: rgba(228, 118, 5, 1);
   left: 0;
   right: 0;
@@ -151,6 +166,7 @@
   }
 
   button {
+    height: -webkit-fill-available;
     padding-left: 1.2em;
     background-color: $orange;
     border: none;
@@ -176,6 +192,7 @@
   @media (max-width: $break-xs) {
     top: $header-min;
     padding-left: 0;
+    height: $header-min;
 
     button {
       padding-left: 0.9em;

@@ -11,7 +11,8 @@ export const LocationTable: React.FC<LocationTableProps> = ({ actionType }) => {
   const isPSA = actionType === 'psa';
 
   const capacityLabel = isPSA ? 'Cap' : 'Tot Cap';
-  const fhd = !(actionType === 'psa');
+  const fhd = !isPSA;
+  const totalCap = isPSA ? '100' : '325';
 
   return (
     <Table responsive>
@@ -30,7 +31,7 @@ export const LocationTable: React.FC<LocationTableProps> = ({ actionType }) => {
         </tr>
         <tr>
           <th>{capacityLabel}</th>
-          <td>325</td>
+          <td>{totalCap}</td>
           <th>Event</th>
           <td>N</td>
         </tr>

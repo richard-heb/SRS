@@ -14,7 +14,7 @@ export interface MenuTopProps {
   title: string;
 }
 
-const MenuTop: React.FC<MenuTopProps> = ({ mainMenu, title }) => {
+export const MenuTop: React.FC<MenuTopProps> = ({ mainMenu, title }) => {
   const logoMargin = mainMenu ? 'main' : '';
 
   const showMenuBars = !mainMenu ? (
@@ -51,5 +51,3 @@ const MenuTop: React.FC<MenuTopProps> = ({ mainMenu, title }) => {
     </Navbar>
   );
 };
-
-export default MenuTop;

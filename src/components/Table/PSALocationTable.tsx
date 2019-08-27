@@ -8,6 +8,7 @@ export interface PSALocation {
   segment: number;
   shelf: number;
   capacity: number;
+  active?: boolean;
 }
 
 export interface PSALocationTableProps {
@@ -25,8 +26,10 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
   const isPSA = actionType === 'psa';
 
   const psaLabel = isPSA ? 'PSA Location' : `PSA Locations (${locationCount})`;
+  const capacityLabel = isPSA ? 'Cap' : 'Tot Cap';
+  const totalCap = isPSA ? '100' : '325';
 
-  const extraPsas = [
+  const extraPsas: PSALocation[] = [
     {
       area: 11,
       aisle: 26,
@@ -34,6 +37,7 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
       segment: 12,
       shelf: 4,
       capacity: 50,
+      active: false,
     },
     {
       area: 11,
@@ -42,6 +46,7 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
       segment: 1,
       shelf: 3,
       capacity: 100,
+      active: false,
     },
     {
       area: 11,
@@ -50,6 +55,7 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
       segment: 9,
       shelf: 4,
       capacity: 75,
+      active: false,
     },
   ];
 
@@ -62,7 +68,7 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
               {psaLabel}
             </th>
           </tr>
-          <tr>
+          <tr className="psa-row">
             <th className="psa-header">Area</th>
             <th className="psa-header">Aisle</th>
             <th className="psa-header">Side</th>
@@ -72,28 +78,18 @@ export const PSALocationTable: React.FC<PSALocationTableProps> = ({
           </tr>
         </thead>
         <tbody>
-          {locations.map(location => {
-            return (
-              <tr>
-                <td className="psa-data">{location.area}</td>
-                <td className="psa-data">{location.aisle}</td>
-                <td className="psa-data">{location.side}</td>
-                <td className="psa-data">{location.segment}</td>
-                <td className="psa-data">{location.shelf}</td>
-                <td className="psa-data">{location.capacity}</td>
-              </tr>
-            );
-          })}
-          {actionType !== 'psa' &&
-            extraPsas.map(location => {
+          {!isPSA &&
+            locations.map(location => {
+              const active = location.active ? 'highlight' : '';
+
               return (
-                <tr>
-                  <td className="psa-data">{location.area}</td>
-                  <td className="psa-data">{location.aisle}</td>
-                  <td className="psa-data">{location.side}</td>
-                  <td className="psa-data">{location.segment}</td>
-                  <td className="psa-data">{location.shelf}</td>
-                  <td className="psa-data">{location.capacity}</td>
+                <tr className={`psa-row ${active}`}>
+                  <td>{location.area}</td>
+                  <td className={`${active}`}>{location.aisle}</td>
+                  <td className={`${active}`}>{location.side}</td>
+                  <td className={`${active}`}>{location.segment}</td>
+                  <td className={`${active}`}>{location.shelf}</td>
+                  <td className={`${active}`}>{location.capacity}</td>
                 </tr>
               );
             })}
